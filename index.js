@@ -8,6 +8,10 @@ app.get('/', (req, res, next) => {
   res.send(cohorts)
 })
 
+app.get('/w', (req, res, next) => {
+  res.send('w')
+})
+
 
 app.get('/:index', (req, res, next) => {
   res.send(cohorts[req.params.index-1])
