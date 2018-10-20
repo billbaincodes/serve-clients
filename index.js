@@ -2,19 +2,21 @@ const express = require('express')
 const app = express()
 const port = 3333
 const cohorts = require('./cohorts.js')
+const error = require('./error.js')
 
 
 app.get('/', (req, res, next) => {
-  res.send(cohorts)
+  res.send('🤖')
 })
-
-app.get('/w', (req, res, next) => {
-  res.send('w')
-})
-
 
 app.get('/:index', (req, res, next) => {
-  res.send(cohorts[req.params.index-1])
+  if (req.params.index <= cohorts.length) {
+    res.send(cohorts[req.params.index-1])
+  }
+  else {
+    res.status(404)
+    res.send(error)
+  }
 })
 
 
