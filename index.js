@@ -6,7 +6,7 @@ const error = require('./error.js')
 
 
 app.get('/', (req, res, next) => {
-  res.send('🤖 🤠')
+  res.send('🤖 🤠 🌶')
 })
 
 app.get('/:index', (req, res, next) => {
