@@ -19,7 +19,6 @@ app.get('/cohorts/:id', (req, res, next) => {
     res.json({ cohort : chosenCohort[0] })
   })
 
-
 app.use(notFound)
 app.use(errorHandler)
 
