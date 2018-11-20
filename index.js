@@ -34,5 +34,5 @@ function errorHandler(err, req, res, next) {
 
 
 app.listen(port, () => {
-  console.log(`I'm up on ye old port ${port}`)
+  console.log(`I'm up on port ${port}`)
 })
